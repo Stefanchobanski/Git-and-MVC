@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceForTransport", "PriceForTransport\PriceForTransport.csproj", "{3125D2EB-4E06-40D9-9CFE-3C14DC6F1CEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTimeExam", "OnTimeExam\OnTimeExam.csproj", "{433BA563-1C0C-4953-895A-8326D7261A1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3125D2EB-4E06-40D9-9CFE-3C14DC6F1CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3125D2EB-4E06-40D9-9CFE-3C14DC6F1CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3125D2EB-4E06-40D9-9CFE-3C14DC6F1CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3125D2EB-4E06-40D9-9CFE-3C14DC6F1CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433BA563-1C0C-4953-895A-8326D7261A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433BA563-1C0C-4953-895A-8326D7261A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433BA563-1C0C-4953-895A-8326D7261A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433BA563-1C0C-4953-895A-8326D7261A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B821156-AAD6-4014-B1BB-A3491E5B4DDE}
+	EndGlobalSection
+EndGlobal
