@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnTimeExam")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+185b4c9f24532c61ddc05ca2853e83fdbd7fcdac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e50420f1b0f78ba4920c9200c27ee94b2109bb51")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnTimeExam")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnTimeExam")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
