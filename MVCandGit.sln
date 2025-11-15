@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceForTransport", "PriceF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTimeExam", "OnTimeExam\OnTimeExam.csproj", "{433BA563-1C0C-4953-895A-8326D7261A1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Histogram", "Histogram\Histogram.csproj", "{51B55B94-47D6-4DC2-A3B4-1EECDDAE2732}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{433BA563-1C0C-4953-895A-8326D7261A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{433BA563-1C0C-4953-895A-8326D7261A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{433BA563-1C0C-4953-895A-8326D7261A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B55B94-47D6-4DC2-A3B4-1EECDDAE2732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B55B94-47D6-4DC2-A3B4-1EECDDAE2732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B55B94-47D6-4DC2-A3B4-1EECDDAE2732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B55B94-47D6-4DC2-A3B4-1EECDDAE2732}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
