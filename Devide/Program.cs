@@ -1,4 +1,4 @@
-﻿namespace Pipes
+﻿namespace Devide
 {
     internal class Program
     {
@@ -7,6 +7,7 @@
             Service service = new Service();
             Controller controller = new Controller(service);
             View view = new View(controller);
+
             view.Display();
         }
     }
