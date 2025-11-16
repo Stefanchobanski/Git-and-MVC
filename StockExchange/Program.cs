@@ -1,4 +1,4 @@
-﻿namespace PasswordGenerator
+﻿namespace StockExchange
 {
     internal class Program
     {

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Histogram", "Histogram\Hist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordGenerator", "PasswordGenerator\PasswordGenerator.csproj", "{F4212BA9-554D-4AD9-B158-DC6412C591FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockExchange", "StockExchange\StockExchange.csproj", "{A0884696-D32D-4D61-81D7-4A27EAD85B05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F4212BA9-554D-4AD9-B158-DC6412C591FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4212BA9-554D-4AD9-B158-DC6412C591FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4212BA9-554D-4AD9-B158-DC6412C591FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0884696-D32D-4D61-81D7-4A27EAD85B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0884696-D32D-4D61-81D7-4A27EAD85B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0884696-D32D-4D61-81D7-4A27EAD85B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0884696-D32D-4D61-81D7-4A27EAD85B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
