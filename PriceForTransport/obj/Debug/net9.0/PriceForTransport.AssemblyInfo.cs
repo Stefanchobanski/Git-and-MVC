@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PriceForTransport")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c1ba3e6e3a78963e72e1eeb74c46128ce425341")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0559b89558db413a8c73b4563f381ba936e2a128")]
 [assembly: System.Reflection.AssemblyProductAttribute("PriceForTransport")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PriceForTransport")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

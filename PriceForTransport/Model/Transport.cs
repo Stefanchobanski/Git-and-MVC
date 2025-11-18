@@ -7,4 +7,6 @@ public class Transport
     public double PriceNight { get; set; }
     public int MinKm { get; set; }
     public double FirstTax { get; set; }
+    public double AllPrice {  get; set; }
+
 }

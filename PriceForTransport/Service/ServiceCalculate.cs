@@ -2,35 +2,52 @@
 
 public class ServiceCalculate
 {
-    double _result = 0;
+    Model _model;
     public string Calculate(Model model)
     {
+        _model = model;
+
         int km = model.Km;
         List<Transport> transports = model.Transports;
         string timeDay = model.TimeDate;
 
-        if (km < 20)
+        if (km < 100 && km >= 20)
         {
-            _result = transports[0].FirstTax;
-
-            if (timeDay == "day")
-            {
-                _result += km * transports[0].PriceDay;
-            }
-            else if (timeDay == "night")
-            {
-                _result += km * transports[0].PriceNight;
-            }
+            model.Transports[1].AllPrice = km * transports[1].PriceDay;
         }
-        else if (km < 100)
+        else if (km >= 100)
         {
-            _result = km * transports[1].PriceDay;
-        }
-        else
-        {
-            _result = km * transports[2].PriceDay;
+            model.Transports[2].AllPrice = km * transports[2].PriceDay;
         }
 
-            return $"{_result:F2}";
+
+        model.Transports[0].AllPrice = transports[0].FirstTax;
+
+        if (timeDay == "day")
+        {
+            model.Transports[0].AllPrice += km * transports[0].PriceDay;
+        }
+        else if (timeDay == "night")
+        {
+            model.Transports[0].AllPrice += km * transports[0].PriceNight;
+        }
+
+
+        return $"{GetLowerTax().AllPrice:F2}";
+    }
+
+
+    private Transport GetLowerTax()
+    {
+        Transport transportLow = _model.Transports[0];
+
+        foreach (var item in _model.Transports)
+        {
+            if((item.AllPrice < transportLow.AllPrice ) && item.AllPrice != 0)
+            {
+                transportLow = item;
+            }
+        }
+        return transportLow;
     }
 }
