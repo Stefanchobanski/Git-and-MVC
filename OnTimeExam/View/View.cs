@@ -11,20 +11,67 @@ public class View
     public void Display()
     {
         Console.Write("В колко часа почва изпита: ");
-        int hourExercise = int.Parse(Console.ReadLine());
+        string hourExercise = Console.ReadLine();
 
         Console.Write("В колко минути почва изпита: ");
-        int minExercise = int.Parse(Console.ReadLine());
+        string minExercise = Console.ReadLine();
 
         Console.Write("В колко часа пристигаш: ");
-        int ariveTimeHour = int.Parse(Console.ReadLine());
+        string ariveTimeHour = Console.ReadLine();
 
         Console.Write("В колко минути пристигаш: ");
-        int ariveTimeMin = int.Parse(Console.ReadLine());
+        string ariveTimeMin = Console.ReadLine();
 
-        Model model = new Model(hourExercise, minExercise, ariveTimeHour, ariveTimeMin);
+        bool state = Check(hourExercise, minExercise, ariveTimeHour, ariveTimeMin);
 
-        string result = _controller.Calculate(model);
-        Console.WriteLine(result);
+        if (!state)
+        {
+            Model model = new Model(int.Parse(hourExercise), int.Parse(minExercise), int.Parse(ariveTimeHour), int.Parse(ariveTimeMin));
+
+            string result = _controller.Calculate(model);
+            Console.WriteLine(result);
+        }
+    }
+
+    public void ThrowsEx(string currentHourExercise, string currentMinExercise, string currentAriveTimeHour, string currentAriveTimeMin)
+    {
+        int hourExercise = int.Parse(currentHourExercise);
+        int minExercise = int.Parse(currentMinExercise);
+        int hourArrive = int.Parse(currentAriveTimeHour);
+        int minArrive = int.Parse(currentAriveTimeMin);
+
+        if (hourArrive < 0 || minExercise < 0 || hourExercise < 0 || minArrive < 0)
+        {
+            throw new Exception("Негативни данни");
+        }
+        if(minArrive >= 60 || minExercise >= 60)
+        {
+            throw new Exception("Въведени минути повече от 60");
+        }
+        if(hourArrive > 24 || hourExercise > 24)
+        {
+            throw new Exception("Въведен час повече от 24");
+        }
+    }
+
+    private bool Check(string hourExercise, string minExercise, string ariveTimeHour, string ariveTimeMin)
+    {
+        bool state = false;
+        try
+        {
+            ThrowsEx(hourExercise, minExercise, ariveTimeHour, ariveTimeMin);
+        }
+        catch(FormatException ex)
+        {
+            Console.WriteLine("Невалиден формат");
+            state = true;
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            state = true;
+        }
+
+        return state;
     }
 }

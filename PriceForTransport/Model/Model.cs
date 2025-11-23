@@ -7,11 +7,11 @@ public class Model
     public string TimeDate = "";
     public Model(int km, string dayTime)
     {
+        Km = km;
         Transports.Add(new Taxi(dayTime));
         Transports.Add(new Bus(dayTime));
         Transports.Add(new Train(dayTime));
 
-        Km = km;
         TimeDate = dayTime;
     }
 }
