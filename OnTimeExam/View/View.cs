@@ -8,7 +8,24 @@ public class View
         _controller = controller;
     }
 
-    public void Display()
+    public string Display(string hourExercise, string minExercise, string ariveTimeHour, string ariveTimeMin)
+    {
+
+        bool state = Check(hourExercise, minExercise, ariveTimeHour, ariveTimeMin);
+
+        if (!state)
+        {
+            Model model = new Model(int.Parse(hourExercise), int.Parse(minExercise), int.Parse(ariveTimeHour), int.Parse(ariveTimeMin));
+
+            string result = _controller.Calculate(model);
+            Console.WriteLine(result);
+
+            return result;
+        }
+        return "";
+    }
+
+    public void InputConsole()
     {
         Console.Write("В колко часа почва изпита: ");
         string hourExercise = Console.ReadLine();
@@ -22,15 +39,7 @@ public class View
         Console.Write("В колко минути пристигаш: ");
         string ariveTimeMin = Console.ReadLine();
 
-        bool state = Check(hourExercise, minExercise, ariveTimeHour, ariveTimeMin);
-
-        if (!state)
-        {
-            Model model = new Model(int.Parse(hourExercise), int.Parse(minExercise), int.Parse(ariveTimeHour), int.Parse(ariveTimeMin));
-
-            string result = _controller.Calculate(model);
-            Console.WriteLine(result);
-        }
+        Display(hourExercise, minExercise, ariveTimeHour, ariveTimeMin);
     }
 
     public void ThrowsEx(string currentHourExercise, string currentMinExercise, string currentAriveTimeHour, string currentAriveTimeMin)
@@ -44,11 +53,11 @@ public class View
         {
             throw new Exception("Негативни данни");
         }
-        if(minArrive >= 60 || minExercise >= 60)
+        if (minArrive >= 60 || minExercise >= 60)
         {
             throw new Exception("Въведени минути повече от 60");
         }
-        if(hourArrive > 24 || hourExercise > 24)
+        if (hourArrive > 24 || hourExercise > 24)
         {
             throw new Exception("Въведен час повече от 24");
         }
@@ -61,12 +70,12 @@ public class View
         {
             ThrowsEx(hourExercise, minExercise, ariveTimeHour, ariveTimeMin);
         }
-        catch(FormatException ex)
+        catch (FormatException ex)
         {
             Console.WriteLine("Невалиден формат");
             state = true;
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
             state = true;

@@ -17,7 +17,7 @@
                 {
                     break;
                 }
-                view.Display();
+                view.InputConsole();
             }
         }
     }

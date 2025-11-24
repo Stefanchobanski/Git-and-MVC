@@ -18,7 +18,7 @@
                 Controller controller = new Controller(service);
                 View view = new View(controller);
 
-                view.Display();
+                view.InputConsole();
             }
 
         }

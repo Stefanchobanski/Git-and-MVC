@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Security.Cryptography;
 
 namespace PriceForTransport;
 
@@ -10,7 +11,7 @@ public class View
         _controller = controller;
     }
 
-    public void Display()
+    public void InputConsole()
     {
         Console.Write("Колко километра ще пътуваш?: ");
         string km = Console.ReadLine();
@@ -18,6 +19,13 @@ public class View
         Console.Write("Ден или нощ е ?: ");
         string timeDay = Console.ReadLine();
 
+        Check(km, timeDay);
+
+    }
+
+    public double Check(string km, string timeDay)
+    {
+    
         bool state = Handle(km, timeDay);
 
         if (!state)
@@ -27,10 +35,12 @@ public class View
 
             string result = _controller.Calculate(model);
             Console.WriteLine(result);
+            return double.Parse(result);
         }
-
+        return -1;
     }
-    
+
+
     public void ThrowsEx(string inputKm, string inputTimeDay)
     {
         int km = 0;
@@ -70,5 +80,6 @@ public class View
         }
         return state;
     }
+
 }
 

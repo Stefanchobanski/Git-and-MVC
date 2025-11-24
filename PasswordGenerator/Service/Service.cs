@@ -1,6 +1,6 @@
 ﻿namespace PasswordGenerator;
 
-internal class Service
+public class Service
 {
     public List<string> GeneratePass(Model model)
     {

@@ -35,5 +35,11 @@ namespace PriceForTransportTest
             var ex = Assert.Throws<FormatException>(() => view.ThrowsEx("hfhf", "day"));
             Assert.That(ex.Message, Is.EqualTo("The input string 'hfhf' was not in a correct format."));
         }
+        [TestCase("12", "day", 10.18)]
+        [TestCase("55", "night", 4.95)]
+        public void PriceForTransport_Service_AddNewInput(string km, string timeDays, double result)
+        {
+            Assert.That(view.Check(km, timeDays), Is.EqualTo(result));
+        }
     }
 }

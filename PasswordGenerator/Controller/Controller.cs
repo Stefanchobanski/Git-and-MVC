@@ -1,6 +1,6 @@
 ﻿namespace PasswordGenerator;
 
-internal class Controller
+public class Controller
 {
     Service _service;
 
