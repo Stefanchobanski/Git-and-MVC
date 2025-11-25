@@ -13,15 +13,49 @@ public class View
     {
         _controller = controller;
     }
-    public void Display()
+
+    public void InputConsole()
     {
         Console.Write("Въведи магическо число: ");
-        int magicNumber = int.Parse(Console.ReadLine());
+        string magicNumber = Console.ReadLine();
 
-        Model model = new Model(magicNumber);
+        Display(magicNumber);
+    }
 
-        string result = _controller.Result(model);
+    public string Display(string magic)
+    {
+        bool state = HandleEx(magic);
 
-        Console.WriteLine(result);
+        if (!state)
+        {
+            Model model = new Model(int.Parse(magic));
+
+            string result = _controller.Result(model);
+
+            Console.WriteLine(result);
+
+            return result;
+        }
+        return "";
+    }
+
+    public void ThrowEx(string number)
+    {
+        int magic = int.Parse(number);
+    }
+
+    private bool HandleEx(string number)
+    {
+        bool state = false;
+        try
+        {
+            ThrowEx(number);
+        }
+        catch(FormatException ex)
+        {
+            Console.WriteLine(ex.Message);
+            state = true;
+        }
+        return state;
     }
 }

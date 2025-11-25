@@ -32,7 +32,7 @@ namespace HistogramTest
         public void Histogram_Service_AddNewInput()
         {
             List<string> list = new List<string> { "100", "250", "450", "650", "900" };
-            Assert.That(view.DisplayOutput(list), Is.EqualTo("20,00%\n20,00%\n20,00%\n20,00%\n20,00%\n"));
+            Assert.That(view.DisplayOutput(list), Is.EqualTo("20.00%\n20.00%\n20.00%\n20.00%\n20.00%\n"));
         }
 
     }
